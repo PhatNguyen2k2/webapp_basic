@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ShowProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Lựa chọn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(int i=1; i<10; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>Sản phẩm thứ @i</td>
+                    <td>
+                        @Html.ActionLink("Chi tiết", "DetailsProduct",
+                       new { productName = "Sản Phẩm Thứ" + i, productId = @i }) |
+                        @Html.ActionLink("Sửa", "EditProduct",
+                       new
+                       {
+                           productId = i
+                       })
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
+

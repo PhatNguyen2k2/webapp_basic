@@ -1,0 +1,14 @@
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\bin\Debug\hardwareinfo.exe.config
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\bin\Debug\hardwareinfo.exe
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\bin\Debug\hardwareinfo.pdb
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\bin\Debug\MetroFramework.Design.dll
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\bin\Debug\MetroFramework.dll
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\bin\Debug\MetroFramework.Fonts.dll
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.csproj.AssemblyReference.cache
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.Form1.resources
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.Properties.Resources.resources
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.csproj.GenerateResource.cache
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.csproj.CoreCompileInputs.cache
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.csproj.CopyComplete
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.exe
+D:\TailieuCNTT\LapTrinhAPI\hardwareinfo\hardwareinfo\obj\Debug\hardwareinfo.pdb

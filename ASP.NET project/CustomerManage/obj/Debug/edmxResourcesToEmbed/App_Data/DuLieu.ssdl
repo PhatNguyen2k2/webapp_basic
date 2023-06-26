@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DuLieuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblChatLieu">
+    <Key>
+      <PropertyRef Name="MaChatLieu" />
+    </Key>
+    <Property Name="MaChatLieu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TenChatLieu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblChiTietHDBan">
+    <Key>
+      <PropertyRef Name="MaHDBan" />
+      <PropertyRef Name="MaHang" />
+    </Key>
+    <Property Name="MaHDBan" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MaHang" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="GiamGia" Type="float" />
+    <Property Name="ThanhTien" Type="float" />
+  </EntityType>
+  <EntityType Name="tblCongViec">
+    <Key>
+      <PropertyRef Name="MaCV" />
+    </Key>
+    <Property Name="MaCV" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="TenCV" Type="nvarchar" MaxLength="30" />
+    <Property Name="Luong" Type="float" />
+  </EntityType>
+  <EntityType Name="tblHang">
+    <Key>
+      <PropertyRef Name="MaHang" />
+    </Key>
+    <Property Name="MaHang" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="TenHang" Type="varchar" MaxLength="50" />
+    <Property Name="MaChatLieu" Type="varchar" MaxLength="20" />
+    <Property Name="Soluong" Type="int" />
+    <Property Name="DonGiaNhap" Type="float" />
+    <Property Name="DonGiaBan" Type="float" />
+    <Property Name="Anh" Type="varchar" MaxLength="50" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblHDBan">
+    <Key>
+      <PropertyRef Name="MaHDBan" />
+    </Key>
+    <Property Name="MaHDBan" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MaNhanVien" Type="varchar" MaxLength="50" />
+    <Property Name="NgayBan" Type="date" />
+    <Property Name="MaKhach" Type="varchar" MaxLength="30" />
+    <Property Name="TongTien" Type="float" />
+  </EntityType>
+  <EntityType Name="tblKhach">
+    <Key>
+      <PropertyRef Name="MaKhach" />
+    </Key>
+    <Property Name="MaKhach" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="TenKhach" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="DienThoai" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="tblNhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNhanVien" Type="varchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="DienThoai" Type="varchar" MaxLength="11" />
+    <Property Name="MaCV" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="fk_tblChiTietHDBan1">
+    <End Role="tblHDBan" Type="Self.tblHDBan" Multiplicity="1" />
+    <End Role="tblChiTietHDBan" Type="Self.tblChiTietHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHDBan">
+        <PropertyRef Name="MaHDBan" />
+      </Principal>
+      <Dependent Role="tblChiTietHDBan">
+        <PropertyRef Name="MaHDBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tblChiTietHDBan2">
+    <End Role="tblHang" Type="Self.tblHang" Multiplicity="1" />
+    <End Role="tblChiTietHDBan" Type="Self.tblChiTietHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHang">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="tblChiTietHDBan">
+        <PropertyRef Name="MaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tblHang">
+    <End Role="tblChatLieu" Type="Self.tblChatLieu" Multiplicity="0..1" />
+    <End Role="tblHang" Type="Self.tblHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChatLieu">
+        <PropertyRef Name="MaChatLieu" />
+      </Principal>
+      <Dependent Role="tblHang">
+        <PropertyRef Name="MaChatLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tblHDBan1">
+    <End Role="tblNhanVien" Type="Self.tblNhanVien" Multiplicity="0..1" />
+    <End Role="tblHDBan" Type="Self.tblHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="tblHDBan">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tblHDBan2">
+    <End Role="tblKhach" Type="Self.tblKhach" Multiplicity="0..1" />
+    <End Role="tblHDBan" Type="Self.tblHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKhach">
+        <PropertyRef Name="MaKhach" />
+      </Principal>
+      <Dependent Role="tblHDBan">
+        <PropertyRef Name="MaKhach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tblNhanVien">
+    <End Role="tblCongViec" Type="Self.tblCongViec" Multiplicity="0..1" />
+    <End Role="tblNhanVien" Type="Self.tblNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCongViec">
+        <PropertyRef Name="MaCV" />
+      </Principal>
+      <Dependent Role="tblNhanVien">
+        <PropertyRef Name="MaCV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DuLieuModelStoreContainer">
+    <EntitySet Name="tblChatLieu" EntityType="Self.tblChatLieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChiTietHDBan" EntityType="Self.tblChiTietHDBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCongViec" EntityType="Self.tblCongViec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHang" EntityType="Self.tblHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHDBan" EntityType="Self.tblHDBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblKhach" EntityType="Self.tblKhach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNhanVien" EntityType="Self.tblNhanVien" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_tblChiTietHDBan1" Association="Self.fk_tblChiTietHDBan1">
+      <End Role="tblHDBan" EntitySet="tblHDBan" />
+      <End Role="tblChiTietHDBan" EntitySet="tblChiTietHDBan" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tblChiTietHDBan2" Association="Self.fk_tblChiTietHDBan2">
+      <End Role="tblHang" EntitySet="tblHang" />
+      <End Role="tblChiTietHDBan" EntitySet="tblChiTietHDBan" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tblHang" Association="Self.fk_tblHang">
+      <End Role="tblChatLieu" EntitySet="tblChatLieu" />
+      <End Role="tblHang" EntitySet="tblHang" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tblHDBan1" Association="Self.fk_tblHDBan1">
+      <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+      <End Role="tblHDBan" EntitySet="tblHDBan" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tblHDBan2" Association="Self.fk_tblHDBan2">
+      <End Role="tblKhach" EntitySet="tblKhach" />
+      <End Role="tblHDBan" EntitySet="tblHDBan" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tblNhanVien" Association="Self.fk_tblNhanVien">
+      <End Role="tblCongViec" EntitySet="tblCongViec" />
+      <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

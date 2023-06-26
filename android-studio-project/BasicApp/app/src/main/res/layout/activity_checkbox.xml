@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckboxActivity"
+    android:padding="15dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn thích xem phim app nào"
+        android:textSize="26sp" />
+    <CheckBox
+        android:id="@+id/chkFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Film+"
+        android:textSize="24sp"/>
+    <CheckBox
+        android:id="@+id/chkFPT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FPT Play"
+        android:textSize="24sp"/>
+    <CheckBox
+        android:id="@+id/chkClip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clip TV"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/btnVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:backgroundTint="#009688"/>
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"
+        android:text="Bạn chọn: "
+        android:textSize="26sp" />
+</LinearLayout>

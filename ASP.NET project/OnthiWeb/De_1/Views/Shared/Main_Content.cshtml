@@ -1,0 +1,28 @@
+﻿@model IEnumerable<De_1.Models.SanPham>
+<div class="row">
+    <div class="col">
+        <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+            <!-- Product 1 -->
+
+            @foreach (var p in Model)
+            {
+            <div class="product-item women">
+                <div class="product product_filter">
+                    <div class="product_image">
+                        <img src="~/Content/images/pro_img/@p.AnhDaiDien" alt="">
+                    </div>
+                    <div class="favorite"></div>
+                    <div class="product_info">
+                        <h6 class="product_name"><a href="#">@p.TenSanPham</a></h6>
+                        <div class="product_price">$@p.DonGiaBanNhoNhat</div>
+                    </div>
+                </div>
+                <div class="red_button add_to_cart_button"><a href="/Home/Create">Thêm Sản Phẩm mới</a></div>
+            </div>
+            }
+
+
+        </div>
+    </div>
+</div>

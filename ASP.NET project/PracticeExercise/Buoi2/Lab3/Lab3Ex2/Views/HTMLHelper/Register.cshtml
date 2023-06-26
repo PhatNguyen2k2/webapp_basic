@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông Tin đã đăng ký</h2>
+<table class="table table-bordered">
+    <tr>
+        <td>Tên Đơn Vị Tuyến</td>
+        <td>@TempData["Name"] </td>
+    </tr>
+
+    <tr>
+        <td>Loại Hình Doanh Nghiệp</td>
+        <td>@TempData["Loai"]</td>
+    </tr>
+
+    <tr>
+        <td>Số Lượng Nhân Viên</td>
+        <td>@TempData["Number"]</td>
+    </tr>
+
+    <tr>
+        <td>Địa Chỉ</td>
+        <td>@TempData["Address"]</td>
+
+    </tr>
+
+    <tr>
+        <td>Người Liên Hệ</td>
+        <td>@TempData["People"]</td>
+    </tr>
+
+    <tr>
+        <td>Số Điện Thoại</td>
+        <td>@TempData["Phone"]</td>
+    </tr>
+
+    <tr>
+        <td>Số Fax</td>
+        <td>@TempData["Fax"]</td>
+    </tr>
+
+    <tr>
+        <td>Email</td>
+        <td>@TempData["Email"]</td>
+    </tr>
+
+    <tr>
+        <td>Địa Chỉ Website</td>
+        <td>@TempData["Website"]</td>
+    </tr>
+
+    <tr>
+        <td>Tên đăng nhập</td>
+        <td>@TempData["UName"]</td>
+    </tr>
+
+    <tr>
+        <td>Mật khẩu</td>
+        <td>@TempData["Pass"]</td>
+    </tr>
+
+    <tr>
+        <td>Nhận Thư Điện Tử</td>
+        <td>@TempData["Checked"]</td>
+    </tr>
+</table>
+

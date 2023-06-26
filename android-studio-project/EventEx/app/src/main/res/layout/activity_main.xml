@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Onclick XML"
+        android:backgroundTint="#009688"
+        android:textSize="24sp"
+        android:onClick="showToast" />
+    <Button
+        android:id="@+id/btnAnonymous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anonymous Listener"
+        android:backgroundTint="#563128"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/btnVariableAsListener1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Variable Listener 1"
+        android:backgroundTint="#235268"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/btnVariableAsListener2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Variable Listener 2"
+        android:backgroundTint="#232068"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/btnActivityAsListener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity Listener"
+        android:backgroundTint="#7BAE92"
+        android:textSize="24sp"/>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "MultiplicationTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bảng Cửu Chương từ 2 đến 9</h2>
+@{ 
+    var numb = 2;
+    var mul = 0;
+}
+@{ 
+    for (int i = 2; i < 10; i++)
+    {
+        <p>Bảng cửu chương @numb </p>
+        for (int j = 1; j <= 10; j++)
+        {
+            mul = i * j;
+            <p>@i x @j = @mul  </p>
+        }
+        numb++;
+    }
+}
+

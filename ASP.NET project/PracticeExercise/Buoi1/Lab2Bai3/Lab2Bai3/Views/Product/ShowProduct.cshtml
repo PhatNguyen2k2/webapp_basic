@@ -1,0 +1,27 @@
+﻿@model Lab2Bai3.Models.Product
+@{
+    ViewBag.Title = "ShowProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bảng xếp hạng tháng 8</h2>
+
+
+<table class="table">
+
+    @foreach (var item in Model.productList)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Name, "DetailsProduct", new { Name = item.Name })
+            </td>
+            <td>
+
+                @Html.ActionLink("Tải về", "TestFilePathResult", new { Name = item.Name })
+
+            </td>
+
+        </tr>
+    }
+    </tbody>
+</table>

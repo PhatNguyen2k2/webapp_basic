@@ -1,0 +1,15 @@
+﻿@model IEnumerable<De_7.Models.PhanLoai>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="alazea-portfolio-filter">
+                <div class="portfolio-filter">
+                    @foreach(var l in Model)
+                    {
+                            <button class="btn id_sp" id="@l.MaPhanLoai">@l.PhanLoaiChinh</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+

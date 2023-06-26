@@ -1,0 +1,13 @@
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.csproj.AssemblyReference.cache
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.Form1.resources
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.Properties.Resources.resources
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.csproj.GenerateResource.cache
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.csproj.CoreCompileInputs.cache
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\bin\Debug\Weathers.exe.config
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\bin\Debug\Weathers.exe
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\bin\Debug\Weathers.pdb
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\bin\Debug\Newtonsoft.Json.dll
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\bin\Debug\Newtonsoft.Json.xml
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.csproj.CopyComplete
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.exe
+D:\TailieuCNTT\LapTrinhAPI\Weathers\Weathers\obj\Debug\Weathers.pdb

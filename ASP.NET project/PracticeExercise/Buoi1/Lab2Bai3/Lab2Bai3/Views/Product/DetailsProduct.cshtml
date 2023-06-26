@@ -1,0 +1,28 @@
+﻿@using Lab2Bai3.Models
+@*@model IEnumerable<Lab2Bai3.Models.Product>*@
+@model Lab2Bai3.Models.Product
+
+@{
+    ViewBag.Title = "DetailsProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Namee = @ViewBag.Name;
+    Namee += ".mp3";
+}
+
+<h2>Bài hát @ViewBag.Name</h2>
+
+<table class="table">
+    
+<tr>
+    <td>
+        <audio controls>
+            <source src="~/Content/@Namee" type="audio/mp3">
+        </audio>
+    </td>
+    <td>
+         @Html.ActionLink("Tải về", "TestFilePathResult", new { Name = ViewBag.Name})
+    </td>
+</tr>
+
+</table>
+
